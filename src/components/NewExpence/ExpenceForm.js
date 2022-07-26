@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import "./ExpenceForm.css";
 
 const ExpenceForm = (props) => {
-  const [enteredTitle, setEnteedTitle] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteedDate] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
   const titleChangeHandler = (event) => {
-    setEnteedTitle(event.target.value);
+    setEnteredTitle(event.target.value);
   };
   const amoutChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
   };
   const dateChangeHandler = (event) => {
-    setEnteedDate(event.target.value);
+    setEnteredDate(event.target.value);
   };
 
   const submitHandler = (event) => {
@@ -26,9 +26,9 @@ const ExpenceForm = (props) => {
     };
 
     props.onSaveExpenseData(expenseData);
-    setEnteedTitle("");
+    setEnteredTitle("");
     setEnteredAmount("");
-    setEnteedDate("");
+    setEnteredDate("");
   };
 
   return (
